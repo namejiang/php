@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="utf-8" />
-		<title>人才列表分页</title>
+		<title>1221</title>
 	</head>
 
 	<body>
 		<div id="title">
-			<p class="t1">人才列表分页</p>
+			<p class="t1">新闻资讯分页</p>
 			<p class="t2"></p>
 			<p class="t3"></p>
 		</div>
 
 	</body>
+	<script src="/object/Public/js/mydata.js"></script>
 	<script type="text/javascript">
 		var JSONObject = [{
 			"title": "新闻资讯分页"
@@ -40,7 +41,7 @@
 			t1.innerHTML = JSONObject[0].title1;
 		}*/
 		var request = new XMLHttpRequest();
-		request.open("POST","mydata.json",true);
+		request.open("get","/object/Public/js/mydata.json",true);
 		request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         request.send("firstName=yqz&lastName=lwz");
 		request.onreadystatechange = function(){
