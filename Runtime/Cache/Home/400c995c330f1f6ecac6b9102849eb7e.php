@@ -14,7 +14,21 @@
 		</div>
 
 	</body>
-	<script src="/object/Public/js/mydata.js"></script>
+<script src="/object/Public/js/http.js"></script>
+<script>
+	ajax({
+		url: "/api/index",              //请求地址
+		type: "POST",                       //请求方式
+		data: { token: 123456},        //请求参数
+		dataType: "json",
+		success: function (response, xml) {console.log(response)
+			// 此处放成功后执行的代码
+		},
+		fail: function (status) {
+			// 此处放失败后执行的代码
+		}
+	});
+</script>
 	<script type="text/javascript">
 		var JSONObject = [{
 			"title": "新闻资讯分页"
